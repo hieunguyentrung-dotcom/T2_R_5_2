@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>READING TEST 2 – PART 5 (101–130) | Song ngữ &amp; Highlight tự động</title>
+<style>
+:root{--navy:#18275b;--navy2:#304d9b;--gold:#d5a01e;--bg:#f3f6fb;--text:#20242c;--muted:#687184;--line:#dbe3f0;--green:#197748;--soft:#f7f9fe;--cue:#ffe58f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:30px 5vw}
+header h1{margin:0 0 8px;font-size:clamp(1.45rem,3vw,2.1rem)}
+header p{margin:0;color:#dbe5ff;max-width:1080px}
+.toolbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:10px 5vw;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:0 3px 12px rgba(24,39,91,.07)}
+.toolbar button{border:1px solid #ccd6e8;background:#fff;color:var(--navy);border-radius:9px;padding:9px 13px;font-weight:800;cursor:pointer}
+.toolbar button:hover{background:#eef2ff}
+.progress{margin-left:auto;font-weight:800;color:var(--muted)}
+main{max-width:1220px;margin:auto;padding:24px 4vw 80px}
+.note{background:#fff8df;border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin-bottom:22px}
+.group{margin-bottom:30px}
+.group-head{display:flex;align-items:center;gap:10px;margin:0 0 13px}
+.group-head span{background:var(--navy);color:#fff;border-radius:999px;padding:6px 12px;font-weight:800}
+.group-head h2{margin:0;color:var(--navy);font-size:1.2rem}
+.card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.qcard{background:#fff;border:1px solid var(--line);border-radius:15px;padding:17px;box-shadow:0 2px 9px rgba(28,45,91,.06)}
+.qcard.answer-open{border-color:#9bc9aa;box-shadow:0 0 0 2px rgba(25,119,72,.08)}
+.qtop{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:11px}
+.qbadge{background:var(--navy);color:#fff;border-radius:999px;padding:6px 12px;font-weight:900}
+.type-tag{color:var(--muted);font-size:.84rem;font-weight:800}
+.sentence-panel{background:var(--soft);border:1px solid #dce4f1;border-radius:11px;padding:13px 14px}
+.panel-title{font-size:.76rem;letter-spacing:.06em;font-weight:900;color:var(--navy);margin-bottom:7px}
+.sentence-en{font-size:1.05rem;font-weight:700;color:#202d59}
+.sentence-vi{margin-top:7px;color:#555;font-style:italic;border-top:1px dashed #d2d9e7;padding-top:7px}
+.blank{display:inline-block;min-width:98px;text-align:center;border-bottom:2px dashed #8e9dba;color:var(--navy);font-weight:900;border-radius:5px;padding:0 4px}
+.blank-answer{display:none}
+.cue{border-radius:4px;padding:1px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.answer-open .cue{background:var(--cue);border-bottom:2px solid #ca9d00}
+.answer-open .blank{background:#dff5e6;border-bottom:2px solid #318d50}
+.answer-open .blank-label{display:none}
+.answer-open .blank-answer{display:inline;color:var(--green)}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
+.choice{display:flex;align-items:flex-start;gap:8px;text-align:left;border:1px solid #cdd7e9;background:#fff;border-radius:10px;padding:9px 10px;cursor:pointer;color:var(--text)}
+.choice:hover{background:#f1f4ff;border-color:#9caed2}
+.choice.selected{background:#eaf0ff;border-color:var(--navy2);box-shadow:0 0 0 2px rgba(48,77,155,.12)}
+.choice.correct{background:#e3f7e9;border-color:#55a96c}
+.choice.wrong{background:#fde8e8;border-color:#d56a6a}
+.letter{flex:0 0 auto;width:27px;height:27px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#e9eef9;color:var(--navy);font-weight:900}
+.choice-en{display:block;font-weight:800}
+.choice-vi{display:block;color:#596171;font-style:italic;margin-top:2px;font-size:.92rem}
+.selected-note{margin:8px 1px 0;color:var(--muted);font-size:.88rem}
+.btnrow{margin-top:10px}
+.answer-btn{border:0;background:var(--gold);color:var(--navy);border-radius:9px;padding:9px 13px;font-weight:900;cursor:pointer}
+.answer-box{display:none;margin-top:11px;border:1px solid #b9dfc5;background:#eff9f2;border-radius:10px;padding:12px 13px}
+.answer-open .answer-box{display:block}
+.answer-title{font-weight:900;color:var(--green)}
+.answer-vi{color:#38634a;font-style:italic;margin-bottom:7px}
+.rule,.explanation{margin-top:6px}
+.tip{margin-top:8px;background:#fff7dc;border-left:4px solid var(--gold);padding:8px 10px;border-radius:6px}
+footer{text-align:center;color:var(--muted);padding:20px 5vw 35px;font-size:.88rem}
+@media(max-width:850px){.card-grid{grid-template-columns:1fr}.progress{width:100%;margin-left:0}}
+@media(max-width:520px){.choices{grid-template-columns:1fr}}
+
+/* ===== PART 5: GIAO DIỆN HAI CỘT ===== */
+main{max-width:1500px}
+.card-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+.qcard{
+  padding:17px 18px;
+}
+.part5-two-column{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(420px,.95fr);
+  gap:18px;
+  align-items:start;
+}
+.part5-question-column,
+.part5-answer-column{
+  min-width:0;
+}
+.part5-question-column .sentence-panel{
+  height:100%;
+  min-height:180px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:18px;
+}
+.part5-answer-column{
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#f8faff;
+  padding:12px;
+}
+.part5-answer-column .choices{
+  grid-template-columns:1fr;
+  margin-top:0;
+}
+.part5-answer-column .choice{
+  width:100%;
+}
+.part5-answer-column .btnrow{
+  margin-top:12px;
+}
+.part5-answer-column .answer-box{
+  line-height:1.5;
+}
+.qtop{
+  border-bottom:1px solid var(--line);
+  padding-bottom:10px;
+  margin-bottom:14px;
+}
+@media(min-width:1101px){
+  .part5-question-column{
+    position:sticky;
+    top:72px;
+    align-self:start;
+  }
+}
+@media(max-width:1100px){
+  .part5-two-column{
+    grid-template-columns:1fr;
+  }
+  .part5-question-column{
+    position:static;
+  }
+  .part5-question-column .sentence-panel{
+    min-height:0;
+  }
+}
+@media(max-width:620px){
+  main{padding-left:10px;padding-right:10px}
+  .qcard{padding:13px}
+  .part5-two-column{gap:12px}
+  .part5-question-column .sentence-panel{padding:14px}
+  .part5-answer-column{padding:9px}
+}
+</style>
+</head>
+<body>
+<header>
+<h1>📘 READING TEST 2 – PART 5 (101–130)</h1>
+<p>Luyện từ loại, cấu trúc, collocation và từ vựng theo ngữ cảnh. Câu hỏi và lựa chọn song ngữ; từ khóa tự động được highlight khi xem đáp án.</p>
+</header>
+<div class="toolbar">
+<button id="showAll">✓ Hiện tất cả đáp án</button>
+<button id="resetAll">↺ Làm lại</button>
+<span class="progress" id="progress">Đã chọn 0/30 câu</span>
+</div>
+<main>
+<div class="note"><b>Hướng dẫn:</b> Câu hỏi nằm ở <b>cột bên trái</b>; lựa chọn, đáp án và giải thích nằm ở <b>cột bên phải</b>. Hãy chọn A/B/C/D trước. Khi mở đáp án, từ đúng được điền vào chỗ trống và các manh mối trong câu tự động được highlight. Trên điện thoại, giao diện tự chuyển thành một cột.</div>
+<section class="group">
+<div class="group-head"><span>Nhóm 1</span><h2>Questions 101–110</h2></div>
+<div class="card-grid">
+<article class="qcard" data-correct="C" id="q101">
+<div class="qtop">
+<span class="qbadge">Question 101</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Before operating your handheld device, <span class="cue">please</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">use</span></span> <span class="cue">the enclosed cable</span> <span class="cue">to charge it</span>.</div>
+<div class="sentence-vi">Trước khi sử dụng thiết bị cầm tay, vui lòng dùng dây cáp đi kèm để sạc thiết bị.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">plan</span>
+<span class="choice-vi">lên kế hoạch</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">remain</span>
+<span class="choice-vi">vẫn còn</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">use</span>
+<span class="choice-vi">sử dụng</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">finish</span>
+<span class="choice-vi">hoàn thành</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (C) use</div>
+<div class="answer-vi">→ sử dụng</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Sau “please” cần động từ nguyên mẫu. “Use the cable to charge it” là cấu trúc đúng và hợp nghĩa.</div>
+<div class="explanation"><b>Giải thích:</b> Câu hướng dẫn người dùng dùng dây cáp đi kèm để sạc thiết bị. Các đáp án còn lại không kết hợp tự nhiên với “the enclosed cable”.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Sau please dùng động từ nguyên mẫu: please + V.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="C" id="q102">
+<div class="qtop">
+<span class="qbadge">Question 102</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Safile’s new external hard drive <span class="cue">can</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">securely</span></span> <span class="cue">store</span> up to one terabyte of data.</div>
+<div class="sentence-vi">Ổ cứng ngoài mới của Safile có thể lưu trữ an toàn tới một terabyte dữ liệu.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">secure</span>
+<span class="choice-vi">bảo vệ / an toàn</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">security</span>
+<span class="choice-vi">sự an toàn</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">securely</span>
+<span class="choice-vi">một cách an toàn</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">secured</span>
+<span class="choice-vi">được bảo vệ</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (C) securely</div>
+<div class="answer-vi">→ một cách an toàn</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Chỗ trống bổ nghĩa cho động từ “store”, nên cần trạng từ “securely”.</div>
+<div class="explanation"><b>Giải thích:</b> “Can securely store” nghĩa là “có thể lưu trữ một cách an toàn”. “Secure” là tính từ/động từ, còn “security” là danh từ.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Động từ thường được bổ nghĩa bằng trạng từ.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="A" id="q103">
+<div class="qtop">
+<span class="qbadge">Question 103</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Mr. Peterson will <span class="cue">travel</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">to</span></span> <span class="cue">the Tokyo office</span> for the annual meeting.</div>
+<div class="sentence-vi">Ông Peterson sẽ đi đến văn phòng Tokyo để tham dự cuộc họp thường niên.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">to</span>
+<span class="choice-vi">đến</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">through</span>
+<span class="choice-vi">xuyên qua</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">in</span>
+<span class="choice-vi">trong</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">over</span>
+<span class="choice-vi">qua / phía trên</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (A) to</div>
+<div class="answer-vi">→ đến</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Travel to + địa điểm = đi đến một nơi nào đó.</div>
+<div class="explanation"><b>Giải thích:</b> Văn phòng Tokyo là điểm đến, nên dùng giới từ “to”.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Học theo cụm: travel to a city/an office/a destination.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="B" id="q104">
+<div class="qtop">
+<span class="qbadge">Question 104</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Yong-Soo Cosmetics will not charge for items on back order <span class="cue">until</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">they</span></span> <span class="cue">have left our warehouse</span>.</div>
+<div class="sentence-vi">Yong-Soo Cosmetics sẽ không tính phí các mặt hàng đang chờ nhập cho đến khi chúng rời khỏi kho.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">them</span>
+<span class="choice-vi">chúng (tân ngữ)</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">they</span>
+<span class="choice-vi">chúng (chủ ngữ)</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">themselves</span>
+<span class="choice-vi">chính chúng</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">their</span>
+<span class="choice-vi">của chúng</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (B) they</div>
+<div class="answer-vi">→ chúng (chủ ngữ)</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Chỗ trống là chủ ngữ của động từ “have left”, nên dùng đại từ chủ ngữ số nhiều “they”.</div>
+<div class="explanation"><b>Giải thích:</b> “They” thay cho “items on back order”. “Them” chỉ dùng ở vị trí tân ngữ.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Trước động từ chia thì thường cần chủ ngữ.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="D" id="q105">
+<div class="qtop">
+<span class="qbadge">Question 105</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Our premium day tour takes visitors to <span class="cue">historic sites</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">along</span></span> <span class="cue">the Aprico River</span>.</div>
+<div class="sentence-vi">Chuyến tham quan cao cấp trong ngày đưa du khách đến các địa điểm lịch sử dọc theo sông Aprico.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">onto</span>
+<span class="choice-vi">lên trên</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">since</span>
+<span class="choice-vi">kể từ / bởi vì</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">inside</span>
+<span class="choice-vi">bên trong</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">along</span>
+<span class="choice-vi">dọc theo</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (D) along</div>
+<div class="answer-vi">→ dọc theo</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Along + sông/đường/bờ biển = dọc theo.</div>
+<div class="explanation"><b>Giải thích:</b> Các địa điểm lịch sử nằm dọc theo con sông, nên “along” phù hợp nhất.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Along thường dùng với river, road, coast, street.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="A" id="q106">
+<div class="qtop">
+<span class="qbadge">Question 106</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Eighty percent of drivers surveyed said they would consider buying a vehicle that <span class="cue">runs on</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">electricity</span></span>.</div>
+<div class="sentence-vi">Tám mươi phần trăm tài xế được khảo sát cho biết họ sẽ cân nhắc mua xe chạy bằng điện.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">electricity</span>
+<span class="choice-vi">điện</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">electrically</span>
+<span class="choice-vi">bằng điện / một cách điện</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">electricians</span>
+<span class="choice-vi">thợ điện</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">electrify</span>
+<span class="choice-vi">điện khí hóa</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (A) electricity</div>
+<div class="answer-vi">→ điện</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Run on + danh từ chỉ nhiên liệu/năng lượng: run on electricity.</div>
+<div class="explanation"><b>Giải thích:</b> Sau giới từ “on” cần danh từ. “Electricity” là nguồn năng lượng mà chiếc xe sử dụng.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Học cụm: run on electricity/gasoline/batteries.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="C" id="q107">
+<div class="qtop">
+<span class="qbadge">Question 107</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Xinzhe Zu has <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">joined</span></span> <span class="cue">Petrin Engineering</span> <span class="cue">as the vice president</span> of operations.</div>
+<div class="sentence-vi">Xinzhe Zu đã gia nhập Petrin Engineering với chức vụ phó chủ tịch phụ trách vận hành.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">attached</span>
+<span class="choice-vi">gắn vào</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">resigned</span>
+<span class="choice-vi">từ chức</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">joined</span>
+<span class="choice-vi">gia nhập</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">combined</span>
+<span class="choice-vi">kết hợp</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (C) joined</div>
+<div class="answer-vi">→ gia nhập</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Join + công ty/tổ chức = gia nhập một công ty/tổ chức.</div>
+<div class="explanation"><b>Giải thích:</b> “Joined Petrin Engineering as…” diễn tả việc bắt đầu làm việc tại công ty với một chức vụ cụ thể.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Join không đi với giới từ “to” khi theo sau là tên tổ chức.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="D" id="q108">
+<div class="qtop">
+<span class="qbadge">Question 108</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Next month, Barder House Books will be holding <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">its</span></span> <span class="cue">third author’s hour</span> in Cleveland.</div>
+<div class="sentence-vi">Tháng tới, Barder House Books sẽ tổ chức chương trình giao lưu tác giả lần thứ ba tại Cleveland.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">it</span>
+<span class="choice-vi">nó</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">itself</span>
+<span class="choice-vi">chính nó</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">its own</span>
+<span class="choice-vi">của riêng nó</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">its</span>
+<span class="choice-vi">của nó</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (D) its</div>
+<div class="answer-vi">→ của nó</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Trước cụm danh từ “third author’s hour” cần tính từ sở hữu “its”.</div>
+<div class="explanation"><b>Giải thích:</b> “Its third author’s hour” nghĩa là sự kiện lần thứ ba của công ty. “Its own” không phù hợp trước số thứ tự trong cấu trúc này.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Possessive adjective + noun: its event, its program.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="C" id="q109">
+<div class="qtop">
+<span class="qbadge">Question 109</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Chester’s Tiles <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">recently</span></span> <span class="cue">expanded</span> <span class="cue">to a second location</span> in Turnington.</div>
+<div class="sentence-vi">Chester’s Tiles gần đây đã mở rộng sang địa điểm thứ hai tại Turnington.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">severely</span>
+<span class="choice-vi">nghiêm trọng</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">usually</span>
+<span class="choice-vi">thường</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">recently</span>
+<span class="choice-vi">gần đây</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">exactly</span>
+<span class="choice-vi">chính xác</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (C) recently</div>
+<div class="answer-vi">→ gần đây</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> “Recently” là trạng từ thời gian phù hợp với hành động vừa xảy ra.</div>
+<div class="explanation"><b>Giải thích:</b> Câu thông báo một sự mở rộng mới của doanh nghiệp, nên “recently expanded” là cách kết hợp tự nhiên.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Recently thường đi với quá khứ đơn hoặc hiện tại hoàn thành.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="D" id="q110">
+<div class="qtop">
+<span class="qbadge">Question 110</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Tabrino’s <span class="cue">has</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">significantly</span></span> <span class="cue">increased</span> the number of almonds in the Nut Medley snack pack.</div>
+<div class="sentence-vi">Tabrino’s đã tăng đáng kể số lượng hạnh nhân trong gói đồ ăn nhẹ Nut Medley.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">significant</span>
+<span class="choice-vi">đáng kể (tính từ)</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">significance</span>
+<span class="choice-vi">tầm quan trọng</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">signifies</span>
+<span class="choice-vi">biểu thị</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">significantly</span>
+<span class="choice-vi">một cách đáng kể</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (D) significantly</div>
+<div class="answer-vi">→ một cách đáng kể</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Chỗ trống bổ nghĩa cho động từ “increased”, nên cần trạng từ “significantly”.</div>
+<div class="explanation"><b>Giải thích:</b> “Has significantly increased” nghĩa là “đã tăng đáng kể”.</div>
+<div class="tip"><b>Mẹo làm bài:</b> have/has + adverb + past participle.</div>
+</section></div></div>
+
+
+
+
+</article></div>
+</section>
+<section class="group">
+<div class="group-head"><span>Nhóm 2</span><h2>Questions 111–120</h2></div>
+<div class="card-grid">
+<article class="qcard" data-correct="A" id="q111">
+<div class="qtop">
+<span class="qbadge">Question 111</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en"><span class="blank"><span class="blank-label">_______</span><span class="blank-answer">Wherever</span></span> <span class="cue">she travels</span>, Jacintha Flores <span class="cue">collects samples of local fabrics</span> and patterns.</div>
+<div class="sentence-vi">Bất cứ nơi nào cô ấy đi đến, Jacintha Flores đều thu thập các mẫu vải và hoa văn địa phương.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">Wherever</span>
+<span class="choice-vi">bất cứ nơi nào</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">In addition to</span>
+<span class="choice-vi">ngoài ra / bên cạnh</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">Either</span>
+<span class="choice-vi">một trong hai</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">In contrast to</span>
+<span class="choice-vi">trái ngược với</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (A) Wherever</div>
+<div class="answer-vi">→ bất cứ nơi nào</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Wherever + mệnh đề = bất cứ nơi nào.</div>
+<div class="explanation"><b>Giải thích:</b> Câu diễn tả rằng ở mọi nơi cô ấy đến, cô ấy đều thu thập mẫu vải địa phương.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Wherever = no matter where.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="D" id="q112">
+<div class="qtop">
+<span class="qbadge">Question 112</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en"><span class="cue">Most picture</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">frames</span></span> at Glowing Photo Lab <span class="cue">go on sale</span> at 3:00 P.M. today.</div>
+<div class="sentence-vi">Hầu hết các khung ảnh tại Glowing Photo Lab sẽ được giảm giá lúc 3 giờ chiều hôm nay.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">framer</span>
+<span class="choice-vi">người đóng khung</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">framing</span>
+<span class="choice-vi">việc đóng khung</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">framed</span>
+<span class="choice-vi">được đóng khung</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">frames</span>
+<span class="choice-vi">các khung ảnh</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (D) frames</div>
+<div class="answer-vi">→ các khung ảnh</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Cần danh từ số nhiều làm chủ ngữ để phù hợp với “Most” và động từ “go”.</div>
+<div class="explanation"><b>Giải thích:</b> “Picture frames” là cụm danh từ cố định, nghĩa là các khung ảnh.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Nhận diện compound noun: picture frame → picture frames.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="C" id="q113">
+<div class="qtop">
+<span class="qbadge">Question 113</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">All students in the business management class hold <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">advanced</span></span> <span class="cue">college degrees</span>.</div>
+<div class="sentence-vi">Tất cả sinh viên trong lớp quản trị kinh doanh đều có bằng đại học nâng cao.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">late</span>
+<span class="choice-vi">muộn</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">developed</span>
+<span class="choice-vi">được phát triển</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">advanced</span>
+<span class="choice-vi">nâng cao</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">elated</span>
+<span class="choice-vi">phấn khởi</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (C) advanced</div>
+<div class="answer-vi">→ nâng cao</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> “Advanced degree” là cụm từ chỉ bằng cấp sau đại học hoặc bằng cấp trình độ cao.</div>
+<div class="explanation"><b>Giải thích:</b> Trong ngữ cảnh giáo dục, “advanced college degrees” phù hợp về nghĩa và cách kết hợp.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Học collocation: advanced degree.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="A" id="q114">
+<div class="qtop">
+<span class="qbadge">Question 114</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en"><span class="cue">We hired Noah Wan</span> of Shengyao Accounting Ltd. <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">to evaluate</span></span> <span class="cue">our company’s financial assets</span>.</div>
+<div class="sentence-vi">Chúng tôi đã thuê Noah Wan của Shengyao Accounting Ltd. để đánh giá tài sản tài chính của công ty.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">to evaluate</span>
+<span class="choice-vi">để đánh giá</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">to be evaluated</span>
+<span class="choice-vi">để được đánh giá</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">will be evaluated</span>
+<span class="choice-vi">sẽ được đánh giá</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">evaluate</span>
+<span class="choice-vi">đánh giá</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (A) to evaluate</div>
+<div class="answer-vi">→ để đánh giá</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Hire someone to do something: thuê ai để làm việc gì.</div>
+<div class="explanation"><b>Giải thích:</b> Noah Wan là người thực hiện hành động đánh giá, nên dùng chủ động “to evaluate”.</div>
+<div class="tip"><b>Mẹo làm bài:</b> hire + person + to V.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="C" id="q115">
+<div class="qtop">
+<span class="qbadge">Question 115</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Ms. Charisse is taking on a new account <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">after</span></span> <span class="cue">she finishes the Morrison project</span>.</div>
+<div class="sentence-vi">Bà Charisse sẽ nhận một khách hàng mới sau khi hoàn thành dự án Morrison.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">with</span>
+<span class="choice-vi">với</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">going</span>
+<span class="choice-vi">đang đi</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">after</span>
+<span class="choice-vi">sau khi</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">between</span>
+<span class="choice-vi">giữa</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (C) after</div>
+<div class="answer-vi">→ sau khi</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> After + mệnh đề diễn tả hành động xảy ra sau một hành động khác.</div>
+<div class="explanation"><b>Giải thích:</b> Bà Charisse chỉ nhận tài khoản mới khi dự án hiện tại đã hoàn thành.</div>
+<div class="tip"><b>Mẹo làm bài:</b> after + subject + verb.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="A" id="q116">
+<div class="qtop">
+<span class="qbadge">Question 116</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Cormet Motors’ profits are <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">higher</span></span> this year <span class="cue">than last year</span>.</div>
+<div class="sentence-vi">Lợi nhuận của Cormet Motors năm nay cao hơn năm ngoái.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">higher</span>
+<span class="choice-vi">cao hơn</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">high</span>
+<span class="choice-vi">cao</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">highly</span>
+<span class="choice-vi">rất / ở mức độ cao</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">highest</span>
+<span class="choice-vi">cao nhất</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (A) higher</div>
+<div class="answer-vi">→ cao hơn</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Có “than” nên cần dạng so sánh hơn: higher.</div>
+<div class="explanation"><b>Giải thích:</b> Câu so sánh lợi nhuận của hai năm, vì vậy dùng “higher … than”.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Dấu hiệu so sánh hơn: than.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="A" id="q117">
+<div class="qtop">
+<span class="qbadge">Question 117</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">In its <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">current</span></span> <span class="cue">advertising campaign</span>, Jaymor Tools <span class="cue">demonstrates</span> how reliable its products are.</div>
+<div class="sentence-vi">Trong chiến dịch quảng cáo hiện tại, Jaymor Tools chứng minh sản phẩm của mình đáng tin cậy như thế nào.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">current</span>
+<span class="choice-vi">hiện tại</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">relative</span>
+<span class="choice-vi">tương đối / có liên quan</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">spacious</span>
+<span class="choice-vi">rộng rãi</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">collected</span>
+<span class="choice-vi">đã thu thập</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (A) current</div>
+<div class="answer-vi">→ hiện tại</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> “Current advertising campaign” là cụm danh từ tự nhiên, chỉ chiến dịch đang diễn ra.</div>
+<div class="explanation"><b>Giải thích:</b> Các đáp án khác không phù hợp về nghĩa với “campaign”.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Dùng ngữ cảnh để chọn tính từ phù hợp với danh từ.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="B" id="q118">
+<div class="qtop">
+<span class="qbadge">Question 118</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Remember to submit receipts for reimbursement <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">when</span></span> <span class="cue">returning from a business trip</span>.</div>
+<div class="sentence-vi">Hãy nhớ nộp biên lai để được hoàn tiền khi trở về từ chuyến công tác.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">such as</span>
+<span class="choice-vi">chẳng hạn như</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">when</span>
+<span class="choice-vi">khi</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">then</span>
+<span class="choice-vi">sau đó</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">within</span>
+<span class="choice-vi">trong vòng</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (B) when</div>
+<div class="answer-vi">→ khi</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> When + V-ing là mệnh đề rút gọn, nghĩa là “khi làm việc gì”.</div>
+<div class="explanation"><b>Giải thích:</b> “When returning” = “when you return”. Câu yêu cầu nộp biên lai khi trở về.</div>
+<div class="tip"><b>Mẹo làm bài:</b> when + V-ing khi chủ ngữ hai mệnh đề giống nhau.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="B" id="q119">
+<div class="qtop">
+<span class="qbadge">Question 119</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Patrons will be able to access Westside Library’s <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">newly</span></span> <span class="cue">acquired collection</span> of books on Tuesday.</div>
+<div class="sentence-vi">Độc giả sẽ có thể tiếp cận bộ sưu tập sách mới được thư viện Westside mua vào thứ Ba.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">instantly</span>
+<span class="choice-vi">ngay lập tức</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">newly</span>
+<span class="choice-vi">mới</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">early</span>
+<span class="choice-vi">sớm</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">naturally</span>
+<span class="choice-vi">một cách tự nhiên</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (B) newly</div>
+<div class="answer-vi">→ mới</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Newly + past participle: newly acquired = mới được mua/tiếp nhận.</div>
+<div class="explanation"><b>Giải thích:</b> “Newly acquired collection” là bộ sưu tập vừa được thư viện bổ sung.</div>
+<div class="tip"><b>Mẹo làm bài:</b> newly + V3 thường tạo cụm tính từ.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="D" id="q120">
+<div class="qtop">
+<span class="qbadge">Question 120</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en"><span class="cue">Please</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">direct</span></span> <span class="cue">any questions</span> about time sheets <span class="cue">to Tabitha Jones</span> in the payroll department.</div>
+<div class="sentence-vi">Vui lòng chuyển mọi câu hỏi về bảng chấm công đến Tabitha Jones ở bộ phận tiền lương.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">direction</span>
+<span class="choice-vi">phương hướng</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">directive</span>
+<span class="choice-vi">chỉ thị</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">directed</span>
+<span class="choice-vi">đã chuyển / hướng</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">direct</span>
+<span class="choice-vi">chuyển / hướng</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (D) direct</div>
+<div class="answer-vi">→ chuyển / hướng</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Sau “please” cần động từ nguyên mẫu: direct questions to someone.</div>
+<div class="explanation"><b>Giải thích:</b> “Direct questions to” nghĩa là chuyển câu hỏi đến người phụ trách.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Collocation: direct a question/inquiry to someone.</div>
+</section></div></div>
+
+
+
+
+</article></div>
+</section>
+<section class="group">
+<div class="group-head"><span>Nhóm 3</span><h2>Questions 121–130</h2></div>
+<div class="card-grid">
+<article class="qcard" data-correct="C" id="q121">
+<div class="qtop">
+<span class="qbadge">Question 121</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Before <span class="cue">signing a delivery</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">receipt</span></span>, be sure to double-check that all the <span class="cue">items ordered</span> are in the <span class="cue">shipment</span>.</div>
+<div class="sentence-vi">Trước khi ký biên nhận giao hàng, hãy kiểm tra lại rằng tất cả hàng đã đặt đều có trong lô hàng.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">decision</span>
+<span class="choice-vi">quyết định</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">announcement</span>
+<span class="choice-vi">thông báo</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">receipt</span>
+<span class="choice-vi">biên nhận</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">limit</span>
+<span class="choice-vi">giới hạn</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (C) receipt</div>
+<div class="answer-vi">→ biên nhận</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Delivery receipt = biên nhận giao hàng.</div>
+<div class="explanation"><b>Giải thích:</b> Người nhận thường ký biên nhận sau khi xác nhận đủ hàng.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Học compound noun: delivery receipt.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="A" id="q122">
+<div class="qtop">
+<span class="qbadge">Question 122</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Funds have been added to the budget for <span class="cue">expenses</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">associated</span></span> <span class="cue">with the new building</span>.</div>
+<div class="sentence-vi">Kinh phí đã được bổ sung vào ngân sách cho các chi phí liên quan đến tòa nhà mới.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">associated</span>
+<span class="choice-vi">liên quan</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">association</span>
+<span class="choice-vi">sự liên kết</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">associate</span>
+<span class="choice-vi">liên kết / cộng sự</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">associates</span>
+<span class="choice-vi">các cộng sự</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (A) associated</div>
+<div class="answer-vi">→ liên quan</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Associated with = liên quan đến.</div>
+<div class="explanation"><b>Giải thích:</b> “Expenses associated with the new building” là các chi phí phát sinh liên quan đến tòa nhà.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Cụm cố định: be associated with.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="A" id="q123">
+<div class="qtop">
+<span class="qbadge">Question 123</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Ms. Bernard <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">noticed</span></span> <span class="cue">that a deadline was approaching</span>, <span class="cue">so she requested some assistance</span>.</div>
+<div class="sentence-vi">Bà Bernard nhận thấy thời hạn đang đến gần nên đã yêu cầu hỗ trợ.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">noticed</span>
+<span class="choice-vi">nhận thấy</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">obscured</span>
+<span class="choice-vi">che khuất</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">withdrew</span>
+<span class="choice-vi">rút lui</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">appeared</span>
+<span class="choice-vi">xuất hiện / có vẻ</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (A) noticed</div>
+<div class="answer-vi">→ nhận thấy</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Notice that + mệnh đề = nhận thấy rằng.</div>
+<div class="explanation"><b>Giải thích:</b> Việc nhận thấy thời hạn sắp đến là nguyên nhân khiến bà yêu cầu giúp đỡ.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Dùng quan hệ nguyên nhân–kết quả để chọn động từ.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="C" id="q124">
+<div class="qtop">
+<span class="qbadge">Question 124</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Mr. Moscowitz <span class="cue">is</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">hopeful</span></span> <span class="cue">that Dr. Tanaka will agree</span> to present the keynote speech at this year’s conference.</div>
+<div class="sentence-vi">Ông Moscowitz hy vọng rằng Tiến sĩ Tanaka sẽ đồng ý trình bày bài phát biểu chính tại hội nghị năm nay.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">hopes</span>
+<span class="choice-vi">hy vọng (động từ)</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">hoped</span>
+<span class="choice-vi">đã hy vọng</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">hopeful</span>
+<span class="choice-vi">đầy hy vọng</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">hopefully</span>
+<span class="choice-vi">hy vọng rằng / một cách đầy hy vọng</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (C) hopeful</div>
+<div class="answer-vi">→ đầy hy vọng</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Sau động từ “is” cần tính từ: be hopeful that.</div>
+<div class="explanation"><b>Giải thích:</b> “Is hopeful that…” nghĩa là “hy vọng rằng…”.</div>
+<div class="tip"><b>Mẹo làm bài:</b> be + adjective: be hopeful, be confident, be certain.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="B" id="q125">
+<div class="qtop">
+<span class="qbadge">Question 125</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Two Australian companies are developing new smart<span class="cue">phone</span>s, but it is unclear <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">which</span></span> phone <span class="cue">will become available first</span>.</div>
+<div class="sentence-vi">Hai công ty Úc đang phát triển điện thoại thông minh mới, nhưng chưa rõ điện thoại nào sẽ được bán trước.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">if</span>
+<span class="choice-vi">liệu</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">which</span>
+<span class="choice-vi">cái nào</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">before</span>
+<span class="choice-vi">trước khi</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">because</span>
+<span class="choice-vi">bởi vì</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (B) which</div>
+<div class="answer-vi">→ cái nào</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Which + danh từ dùng để hỏi lựa chọn giữa các đối tượng xác định.</div>
+<div class="explanation"><b>Giải thích:</b> Có hai loại điện thoại đang được so sánh, nên “which phone” nghĩa là “điện thoại nào”.</div>
+<div class="tip"><b>Mẹo làm bài:</b> which + noun khi lựa chọn trong một nhóm giới hạn.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="B" id="q126">
+<div class="qtop">
+<span class="qbadge">Question 126</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Corners <span class="cue">Gym</span> offers its members a free lesson in how to <span class="cue">use</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">weights</span></span> <span class="cue">properly</span>.</div>
+<div class="sentence-vi">Corners Gym cung cấp cho thành viên một buổi học miễn phí về cách sử dụng tạ đúng cách.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">weighs</span>
+<span class="choice-vi">cân / nặng</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">weights</span>
+<span class="choice-vi">các quả tạ</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">weighty</span>
+<span class="choice-vi">nặng nề</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">weighed</span>
+<span class="choice-vi">đã được cân</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (B) weights</div>
+<div class="answer-vi">→ các quả tạ</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Sau “use” cần danh từ làm tân ngữ; trong phòng gym, “weights” là các quả tạ.</div>
+<div class="explanation"><b>Giải thích:</b> Buổi học hướng dẫn thành viên sử dụng tạ đúng cách.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Dùng ngữ cảnh chuyên ngành để xác định nghĩa.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="D" id="q127">
+<div class="qtop">
+<span class="qbadge">Question 127</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en"><span class="blank"><span class="blank-label">_______</span><span class="blank-answer">According to</span></span> <span class="cue">the rules</span>, overnight parking <span class="cue">is not permitted</span> at the clubhouse facility.</div>
+<div class="sentence-vi">Theo quy định, không được phép đỗ xe qua đêm tại cơ sở câu lạc bộ.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">Prior to</span>
+<span class="choice-vi">trước</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">Except for</span>
+<span class="choice-vi">ngoại trừ</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">Instead of</span>
+<span class="choice-vi">thay vì</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">According to</span>
+<span class="choice-vi">theo</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (D) According to</div>
+<div class="answer-vi">→ theo</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> According to + nguồn thông tin/quy định = theo.</div>
+<div class="explanation"><b>Giải thích:</b> Câu nêu một quy định về đỗ xe, nên “According to the rules” là phù hợp.</div>
+<div class="tip"><b>Mẹo làm bài:</b> According to + rules/report/schedule/person.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="D" id="q128">
+<div class="qtop">
+<span class="qbadge">Question 128</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en"><span class="cue">Once</span> everyone <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">has arrived</span></span>, <span class="cue">we can begin</span> the conference call.</div>
+<div class="sentence-vi">Khi mọi người đã đến đầy đủ, chúng ta có thể bắt đầu cuộc gọi hội nghị.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">arrived</span>
+<span class="choice-vi">đã đến</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">is arriving</span>
+<span class="choice-vi">đang đến</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">to arrive</span>
+<span class="choice-vi">để đến</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">has arrived</span>
+<span class="choice-vi">đã đến</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (D) has arrived</div>
+<div class="answer-vi">→ đã đến</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Hiện tại hoàn thành nhấn mạnh việc mọi người phải đến đủ trước khi cuộc gọi bắt đầu.</div>
+<div class="explanation"><b>Giải thích:</b> “Once everyone has arrived” diễn tả hành động hoàn tất trước hành động tương lai trong mệnh đề chính.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Sau once/when trong mệnh đề thời gian không dùng will.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="B" id="q129">
+<div class="qtop">
+<span class="qbadge">Question 129</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Each summer a <span class="cue">motivational video</span> that <span class="cue">highlights the past year’s</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">accomplishments</span></span> is shown to all company employees.</div>
+<div class="sentence-vi">Mỗi mùa hè, một video truyền động lực nêu bật những thành tựu của năm trước được chiếu cho toàn thể nhân viên.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">preferences</span>
+<span class="choice-vi">sở thích</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">accomplishments</span>
+<span class="choice-vi">thành tựu</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">communications</span>
+<span class="choice-vi">các hoạt động giao tiếp</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">uncertainties</span>
+<span class="choice-vi">những điều không chắc chắn</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (B) accomplishments</div>
+<div class="answer-vi">→ thành tựu</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> Một video truyền động lực thường nêu bật các thành tựu của năm trước.</div>
+<div class="explanation"><b>Giải thích:</b> “Past year’s accomplishments” là cụm từ phù hợp nhất về nghĩa.</div>
+<div class="tip"><b>Mẹo làm bài:</b> Dựa vào mục đích của văn bản để chọn từ vựng.</div>
+</section></div></div>
+
+
+
+
+</article>
+<article class="qcard" data-correct="B" id="q130">
+<div class="qtop">
+<span class="qbadge">Question 130</span>
+<span class="type-tag">TOEIC Part 5</span>
+</div>
+<div class="part5-two-column"><div class="part5-question-column"><div class="sentence-panel">
+<div class="panel-title">CÂU HỎI / QUESTION</div>
+<div class="sentence-en">Employees who wish to attend <span class="cue">the retirement dinner</span> <span class="blank"><span class="blank-label">_______</span><span class="blank-answer">to honor</span></span> <span class="cue">Ms. Howells’ 30 years of service</span> should contact Mr. Lee.</div>
+<div class="sentence-vi">Nhân viên muốn tham dự bữa tối nghỉ hưu nhằm tôn vinh 30 năm cống hiến của bà Howells nên liên hệ ông Lee.</div>
+</div></div><div class="part5-answer-column"><div class="choices">
+<button class="choice" data-letter="A" type="button">
+<span class="letter">A</span>
+<span class="choice-copy">
+<span class="choice-en">honor</span>
+<span class="choice-vi">tôn vinh</span>
+</span>
+</button>
+<button class="choice" data-letter="B" type="button">
+<span class="letter">B</span>
+<span class="choice-copy">
+<span class="choice-en">to honor</span>
+<span class="choice-vi">để tôn vinh</span>
+</span>
+</button>
+<button class="choice" data-letter="C" type="button">
+<span class="letter">C</span>
+<span class="choice-copy">
+<span class="choice-en">will honor</span>
+<span class="choice-vi">sẽ tôn vinh</span>
+</span>
+</button>
+<button class="choice" data-letter="D" type="button">
+<span class="letter">D</span>
+<span class="choice-copy">
+<span class="choice-en">will be honored</span>
+<span class="choice-vi">sẽ được tôn vinh</span>
+</span>
+</button></div><div class="selected-note">Chưa chọn đáp án.</div><div class="btnrow">
+<button class="answer-btn" type="button">✓ Hiện đáp án &amp; giải thích</button>
+</div><section class="answer-box">
+<div class="answer-title">Đáp án đúng: (B) to honor</div>
+<div class="answer-vi">→ để tôn vinh</div>
+<div class="rule"><b>Cấu trúc / Từ khóa:</b> To honor là cụm nguyên mẫu chỉ mục đích của bữa tối.</div>
+<div class="explanation"><b>Giải thích:</b> Bữa tối được tổ chức nhằm tôn vinh 30 năm phục vụ của bà Howells.</div>
+<div class="tip"><b>Mẹo làm bài:</b> to V có thể chỉ mục đích: an event to celebrate/honor/raise funds.</div>
+</section></div></div>
+
+
+
+
+</article></div>
+</section>
+</main>
+<footer>READING TEST 2 · TOEIC PART 5 · Questions 101–130</footer>
+<script>
+const cards=[...document.querySelectorAll('.qcard')];
+
+function updateProgress(){
+  const total=cards.length;
+  const selected=document.querySelectorAll('.choice.selected').length;
+  document.getElementById('progress').textContent=`Đã chọn ${selected}/${total} câu`;
+}
+
+function mark(card,show){
+  const correct=card.dataset.correct;
+  card.querySelectorAll('.choice').forEach(choice=>{
+    choice.classList.remove('correct','wrong');
+    if(show && choice.dataset.letter===correct) choice.classList.add('correct');
+    if(show && choice.classList.contains('selected') && choice.dataset.letter!==correct) choice.classList.add('wrong');
+  });
+}
+
+function setAnswer(card,show){
+  card.classList.toggle('answer-open',show);
+  mark(card,show);
+  card.querySelector('.answer-btn').textContent=show?'Ẩn đáp án & giải thích':'✓ Hiện đáp án & giải thích';
+}
+
+document.addEventListener('click',event=>{
+  const choice=event.target.closest('.choice');
+  if(choice){
+    const card=choice.closest('.qcard');
+    card.querySelectorAll('.choice').forEach(x=>x.classList.remove('selected','wrong'));
+    choice.classList.add('selected');
+    card.querySelector('.selected-note').textContent=`Bạn đã chọn: ${choice.dataset.letter}`;
+    if(card.classList.contains('answer-open')) mark(card,true);
+    updateProgress();
+    return;
+  }
+
+  const btn=event.target.closest('.answer-btn');
+  if(btn){
+    const card=btn.closest('.qcard');
+    setAnswer(card,!card.classList.contains('answer-open'));
+  }
+});
+
+document.getElementById('showAll').onclick=function(){
+  const show=!cards.every(card=>card.classList.contains('answer-open'));
+  cards.forEach(card=>setAnswer(card,show));
+  this.textContent=show?'Ẩn tất cả đáp án':'✓ Hiện tất cả đáp án';
+};
+
+document.getElementById('resetAll').onclick=function(){
+  cards.forEach(card=>{
+    card.classList.remove('answer-open');
+    card.querySelectorAll('.choice').forEach(c=>c.classList.remove('selected','correct','wrong'));
+    card.querySelector('.selected-note').textContent='Chưa chọn đáp án.';
+    card.querySelector('.answer-btn').textContent='✓ Hiện đáp án & giải thích';
+  });
+  document.getElementById('showAll').textContent='✓ Hiện tất cả đáp án';
+  updateProgress();
+  window.scrollTo({top:0,behavior:'smooth'});
+};
+
+updateProgress();
+</script>
+</body>
+</html>
